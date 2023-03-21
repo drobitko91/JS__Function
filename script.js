@@ -71,5 +71,34 @@ function getSquareArea(a, b) {
   } 
   return a * b;
 }
-console.log(getSquareArea(3));
-console.log(getSquareArea(2, 3));
+// console.log(getSquareArea(3));
+// console.log(getSquareArea(2, 3));
+
+
+// norma
+// task 1
+
+function isPerfectNumber(a) {
+  let result = 0;
+  for (let i = a / 2; i >= 1; i--) {
+    if (a % i === 0) {
+      result = result + i;
+    } 
+  }
+  if (result === a) {
+    return true;
+  }
+}
+console.log(isPerfectNumber(28));
+
+function getAllPerfectNumbers(min, max) {
+  const arr = [];
+
+  for ( let i = min; i <= max; i++) {
+    if (isPerfectNumber(i)) {
+      arr.push(i);
+    }
+  } 
+  return arr;
+}
+console.log(getAllPerfectNumbers(5, 28));
